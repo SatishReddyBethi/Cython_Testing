@@ -11,3 +11,10 @@ def MultiArray(multi_array):
     for i in range(0,multi_array.shape[0]):
         b+=multi_array['obj_id'][i]
     return b
+
+def TestLoop():
+    n = 2_000_000
+    b = 0
+    for i in range(n):
+        b+=i
+    return b

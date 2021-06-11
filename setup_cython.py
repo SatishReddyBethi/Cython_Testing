@@ -41,7 +41,7 @@ import sys
 print("====[Build Process Started]====")
 
 setup(
-    ext_modules = cythonize('Funcs_Cy.pyx',
+    ext_modules = cythonize(["Funcs_Cy.pyx"],#"Util_Cy.pxd"],
                             compiler_directives={'language_level' : "3"},
                             build_dir="build",annotate=True), #nthreads=n_threads),
     # include_dirs=[numpy.get_include()]

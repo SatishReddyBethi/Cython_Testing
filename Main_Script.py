@@ -25,3 +25,16 @@ tic = time.perf_counter()
 e = cy.MultiArray(multi_array)
 toc = time.perf_counter()
 print(f"[INFO] Cython:{toc - tic:0.8f} seconds")
+
+tic = time.perf_counter()
+f = py.TestLoop()
+toc = time.perf_counter()
+print(f"[INFO] Python:{toc - tic:0.8f} seconds")
+
+tic = time.perf_counter()
+g = cy.TestLoop()
+toc = time.perf_counter()
+print(f"[INFO] Cython:{toc - tic:0.8f} seconds")
+
+# f = cy.ReturnTypes(np.array([1,2],dtype=np.int32))
+# print(np.array(f))
